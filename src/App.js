@@ -7,10 +7,6 @@ import iconHome from './assets/iconHome.svg'
 import {  useState } from 'react';
 
 function App() {
-  const api = {
-    key: "9700e069252a14ed6f05f5f5871c67f8",
-    base: "https://api.openweathermap.org/data/2.5/"
-  }
   const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const [placeholder, setPlaceholder] = useState("Enter a city...");
   const [home, setHome] = useState(false)
@@ -27,7 +23,7 @@ function App() {
     if (evt.key === "Enter") {
       let result = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=63f095bfa4506aeeb29d26296958a5fd`)
       let resultss = await result.json()
-      if (resultss.cod != '404') {
+      if (resultss.cod !== '404') {
         setHome(true)
         setWeather(resultss)
         setQuery("")
@@ -42,7 +38,7 @@ function App() {
       //Forecast
       let resultForecast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${query}&appid=63f095bfa4506aeeb29d26296958a5fd`)
       let resultssForecast = await resultForecast.json()
-      if (resultssForecast.cod != '404') {
+      if (resultssForecast.cod !== '404') {
         setListDay(resultssForecast)
         console.log(resultssForecast)
         console.log("success")
@@ -83,7 +79,7 @@ function App() {
                   <h3>Today</h3>
                   <h2>{weather?.name}</h2>
                   <h4>Temperature: {Math.floor(weather?.main?.temp - 273.15)} °C</h4>
-                  <h4>{weather != "" ? weather.weather[0].main : null}</h4>
+                  <h4>{weather !== "" ? weather.weather[0].main : null}</h4>
                 </div>
               </div>
             </div>
