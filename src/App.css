@@ -1,0 +1,53 @@
+.boder {
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid beige;
+    border-radius: 25px;
+    opacity: 0.7;
+    background-color: rgb(219, 216, 216)
+}
+
+h1 {
+    margin-top: 200px;
+    font-size: 70px;
+    color: #365a7a;
+    padding-bottom: 250px;
+}
+
+
+.iconTheme {
+    width: 500px;
+}
+
+.inputCity {
+    display: flex;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+
+.detail {
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 70px;
+}
+
+.listday {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.eachDay {
+    border: 1px solid beige;
+    border-radius: 30px;
+    background-color: rgb(219, 216, 216);
+    padding: 30px;
+    margin-top: -100px;
+}
